@@ -201,8 +201,10 @@
         var hour = '0' + now.getHours();
         var min = '0' + now.getMinutes();
         var day = now.getDay();
-        var day_arr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-        day = day_arr[day - 1];
+        var day_arr = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+
+        day = day_arr[day];
+
         $('#date').text(now.getFullYear() + '.' + month.substr(-2) + '.' + date.substr(-2) + '　' + day + ' ' + hour.substr(-2) + ':' + min.substr(-2));
         setTimeout(timer, 1000);
     }
