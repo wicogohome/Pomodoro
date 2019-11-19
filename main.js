@@ -241,7 +241,11 @@ var app = new Vue({
                     var sec = this.countdown.substr(-2);
                     var restart_now = new Date();
 
-                    this.after_time.setMinutes(restart_now.getMinutes() + Number(min));
+                    var serMin = restart_now.getMinutes() + Number(min);
+                    if(!this.isRest){
+                        serMin = serMin>= 25 ? serMin-60:serMin;
+                    }
+                    this.after_time.setMinutes(serMin);
                     this.after_time.setSeconds(restart_now.getSeconds() + Number(sec));
 
                     this.t = setTimeout(() => {
