@@ -243,8 +243,9 @@ var app = new Vue({
 
                     var serMin = restart_now.getMinutes() + Number(min);
                     if(!this.isRest){
-                        serMin = serMin>= 25 ? serMin-60:serMin;
+                        serMin = serMin>= 60 ? serMin-60:serMin;
                     }
+
                     this.after_time.setMinutes(serMin);
                     this.after_time.setSeconds(restart_now.getSeconds() + Number(sec));
 
