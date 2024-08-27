@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base:'/Pomodoro/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
