@@ -11,7 +11,11 @@
 }
 
 body {
-    font-family: "Avenir Next LT Pro";
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
     background-color: #F7F5F1;
     color: var(--main-blue-color);
 }
@@ -22,7 +26,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.875rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
@@ -153,7 +157,7 @@ ol.music > li {
 }
 
 #date {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 /******btn******/
@@ -161,7 +165,7 @@ ol.music > li {
     border: 2px solid #2A56A5;
     border-radius: 8px;
     color: var(--main-blue-color);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: bolder;
     padding: 0.5rem 1rem;
 }
@@ -211,7 +215,7 @@ ol.music > li {
 
 .navbar-todo-list {
     line-height: 2.375rem;
-    font-size: 1.375rem;
+    font-size: 1.2rem;
     padding: 0 1.25rem;
 }
 

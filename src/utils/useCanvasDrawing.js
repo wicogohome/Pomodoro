@@ -40,7 +40,7 @@ export function useCanvasDrawing() {
       } else {
         ctx.fillStyle = '#003CA1'
       }
-      ctx.font = "15pt Avenir Next LT Pro"
+      ctx.font = "15pt Open Sans"
       ctx.fillText(i + 15, 32 + 320 / 6 * i, 240)
 
       //線
@@ -91,7 +91,7 @@ export function useCanvasDrawing() {
     const grd = ctx.createLinearGradient(0, 0, 0, 200)
     grd.addColorStop(0, "#5980C3")
     grd.addColorStop(0.7, "#afb7c3")
-    grd.addColorStop(1, "rgba(0,0,0,0)")
+    grd.addColorStop(1, "rgba(255, 255, 255, 0)")
 
     ctx.fillStyle = grd
     ctx.closePath()
