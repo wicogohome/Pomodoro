@@ -124,9 +124,9 @@ export default defineComponent({
           </div>
           <div class="tab-pane fade" id="analysis" role="tabpanel" aria-labelledby="analysis-tab">
             <h3 class="text-center navbar-white-text">Analysis</h3>
-            <div class="navbar-white-col">
-              <canvas ref="anaRef" id="ana" width="380" height="250"></canvas>
-              <div class="offset-1 col-10 row align-items-center mt-2">
+            <div class="navbar-white-col d-flex flex-column">
+              <canvas ref="anaRef" id="ana" width="380" height="250" class="d-flex"></canvas>
+              <div class="d-flex align-items-center mt-2">
                 <i class="fas fa-chevron-left fa-2x"></i>
                 <div class="col text-center"><h4><b>Weekly</b></h4></div>
                 <i class="fas fa-chevron-right fa-2x"></i>
@@ -209,7 +209,7 @@ export default defineComponent({
               :class="{'white-circle': i > currentTask?.useTime}"></li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-md-3 col-4">
         <div class="todo-list-group">
           <h2 class="text-right">{{ currentTask?.name }}
             <i class="fas fa-chevron-circle-down fa-xs"></i>
@@ -223,9 +223,9 @@ export default defineComponent({
       </div>
     </div>
     <div class="col align-self-center">
-      <div class="offset-1 col-3 row align-items-center">
+      <div class="offset-1 col-md-3 col-4 row align-items-center">
         <i class="fas fa-forward fa-2x" @click="isRest = !isRest; skip()"></i>
-        <button class="btn btn-main-blue mx-4 col" :class="{'btn-pause-blue': switchButton}" id="switchButton"
+        <button class="btn btn-main-blue mx-md-4 mx-1 col" :class="{'btn-pause-blue': switchButton}" id="switchButton"
                 @click="timing">{{ switchButton ? 'Pause' : 'Start' }}
         </button>
         <i class="fas fa-redo-alt fa-2x" @click="reset"></i>
